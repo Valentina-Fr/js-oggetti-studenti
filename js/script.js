@@ -45,6 +45,22 @@ const students = [
     surname: 'Bloggs'}
 ]
 
+//Utente inserisce nuovo studente
+const newStudent = {
+    name: '',
+    surname: '',
+    age: ''
+};
+
+const userName = prompt('Inserisci nome');
+newStudent.name = userName;
+const userSurname = prompt('Inserisci cognome');
+newStudent.surname = userSurname;
+const userAge = prompt('Inserisci età');
+newStudent.age = userAge;
+
+students.push(newStudent);
+
 var printStudents = document.getElementById('student-list');
 let listItemProperties = '';
 
