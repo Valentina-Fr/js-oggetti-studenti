@@ -13,4 +13,12 @@ const student = {
     age: '40'
 }
 
-console.log(student);
+var printStudent = document.getElementById('student');
+let studentProperties = '';
+
+//Stampo con ciclo for in
+for (let key in student) {
+    studentProperties += key + ': ' + student[key] + '<br>';
+}
+
+printStudent.innerHTML = studentProperties;
