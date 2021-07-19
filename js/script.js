@@ -45,4 +45,14 @@ const students = [
     surname: 'Bloggs'}
 ]
 
-console.table(students);
+var printStudents = document.getElementById('student-list');
+let listItemProperties = '';
+
+//Ciclare su tutti gli studenti
+for (let i = 0; i < students.length; i++) {
+    for (let key in students[i]) {
+        listItemProperties += key + ': ' + students[i][key] + '<br>';
+    }
+}
+
+printStudents.innerHTML = listItemProperties;
