@@ -66,9 +66,13 @@ let listItemProperties = '';
 
 //Ciclare su tutti gli studenti
 for (let i = 0; i < students.length; i++) {
+    listItemProperties += '<li>';
+
     for (let key in students[i]) {
         listItemProperties += key + ': ' + students[i][key] + '<br>';
     }
+
+    listItemProperties += '</li>';
 }
 
 printStudents.innerHTML = listItemProperties;
